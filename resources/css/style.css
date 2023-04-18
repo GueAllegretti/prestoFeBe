@@ -1,0 +1,512 @@
+:root {
+    --primary-color: #1c1c1c;
+    --white-color: #fafafa;
+    --primary-color-navbar: #1c1c1c;
+    --white-color-navbar: #fafafa;
+    --secondary-color: #7ed321;
+    --terziary-color: #404040;
+    --body-fonts: "Be Vietnam Pro", sans-serif;
+    --bg-logo: url("/media/Presto_reverse.png");
+}
+[data-theme="light"] {
+    --primary-color-navbar: #f5f5f5;
+    --white-color-navbar: #1c1c1c;
+    --bg-logo: url("/media/Presto.it.png");
+  }
+
+* {
+    font-family: var(--body-fonts);
+}
+
+a {
+    text-decoration: none;
+}
+
+.link-card {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.link-card:hover {
+    color: var(--secondary-color);
+}
+
+.bg-green {
+    background-color: var(--secondary-color);
+}
+.bg-alert{
+    background-color: rgb(233, 73, 73);
+    color: white;
+}
+.color-black{
+    color: var(--primary-color) !important;
+}
+.icon-color {
+    color: #81f602;
+}
+.delete-color{
+    background-color: red !important;
+}
+.delete-color:hover{
+    background-color: var(--white-color) !important;
+    color: red !important;
+    outline: 2px solid red !important;
+}
+
+.glide__bullet {
+    width: 12px;
+    height: 12px;
+    background-color: var(--secondary-color);
+}
+
+.glide__bullets {
+    bottom: -2em;
+}
+
+.bg-1 {
+    position: absolute;
+    left: 42%;
+    top: 70%;
+    width: 44%;
+    height: 28%;
+}
+
+.bg-2 {
+    left: -3%;
+    top: 40%;
+    position: absolute;
+    width: 28%;
+    height: 28%;
+}
+.bg-3 {
+    left: 27%;
+    top: 40%;
+    width: 10%;
+    position: absolute;
+    height: 28%;
+}
+.img-home {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0px 0px 8px black;
+}
+.bg-4 {
+    position: absolute;
+    z-index: 2;
+    left: 39%;
+    top: 40%;
+    width: 28%;
+    height: 28%;
+}
+.bg-5 {
+    left: 22%;
+    top: 10%;
+    position: absolute;
+    height: 28%;
+    width: 44%;
+}
+.bg-6 {
+    left: 81%;
+    top: 40%;
+    position: absolute;
+    width: 28%;
+    height: 28%;
+}
+.bg-7 {
+    left: 69%;
+    top: 40%;
+    position: absolute;
+    width: 10%;
+    height: 28%;
+}
+.bg-8 {
+    left: 68%;
+    top: 10%;
+    position: absolute;
+    height: 28%;
+    width: 44%;
+}
+.header {
+    margin-top: 25vh;
+    position: relative;
+}
+.scrollDown {
+    bottom: 120px;
+}
+
+
+/* .header:hover .bg-2{
+    transform: translate() 2s cubic-bezier(0.77, 0, 0.18, 1), -webkit-transform 2s cubic-bezier(0.77, 0, 0.18, 1);
+} */
+
+@media all and (min-width: 451px) {
+    .wrapper-announce {
+        margin-left: 15vw;
+
+    }
+    .navbar-dark .navbar-nav .nav-link {
+        color: var(--white-color-navbar);
+        font-weight: bold;
+    }
+    .navbar-dark .navbar-nav .nav-link.active {
+        color: var(--white-color-navbar);
+    }
+    .navbar .dropdown-menu-end {
+        right: 0;
+        left: auto;
+    }
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        margin-top: 0;
+        top: 15vh;
+        background-color: var(--primary-color-navbar);
+    }
+    .navbar .nav-item:hover > .nav-link {
+        color: var(--primary-color-navbar) !important;
+    }
+    /* .navbar .nav-item:hover .nav-link{ color: var(--primary-color) ;  } */
+    .navbar .dropdown-menu.fade-down {
+        top: 80%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+    }
+    .navbar .dropdown-menu.fade-up {
+        top: 180%;
+    }
+    .navbar .nav-item:hover .dropdown-menu {
+        transition: 0.3s;
+        opacity: 1;
+        visibility: visible;
+        top: 100%;
+        transform: translateY(0vh);
+        padding: 0px;
+    }
+}
+
+@media all and (max-width: 992px) {
+    .dropdown-menu {
+        background-color: var(--primary-color-navbar);
+    }
+}
+/* ///////////////////////////////////////////////////////////// */
+/* gestiamo le mediaqueries da cellulare */
+@media all and (max-width: 450px){
+    .logo-nav{
+        background: var(--bg-logo);
+        background-position: center;
+        background-size: cover;
+        height: 8vw;
+        width: 8vw;
+    }
+    .li-category{
+        border: 2px solid var(--primary-color);
+        margin-left: 2px;
+        padding: 0.5rem;
+    }
+    .wrapper-announce {
+        margin-left: 0vw;
+
+    }
+    .masthead {
+        margin-top: 10vh;
+        margin-left: 0;
+    }
+    .bg-wrapper {
+        position: absolute;
+        width: 75rem;
+        height: 27rem;
+        transform: translateY(-50%) rotate(45deg) scale(1.5);
+        left: 80%;
+        top: -90%;
+        z-index: -1;
+        opacity: 0.5;
+    }
+    .nav-item-revisor{
+        border: none;
+    }
+    .wrapper-category {
+        display: flex;
+        position: sticky;
+        z-index: 3;
+    }
+    .category-list{
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        justify-content:center;
+    }
+}
+@media all and (min-width: 451px){
+    .logo-nav{
+        background: var(--bg-logo);
+        background-position: center;
+        background-size: cover;
+        height: 3vw;
+        width: 3vw;
+    }
+    .wrapper-category {
+        position: fixed;
+        margin-bottom: 50rem;
+        z-index: 3;
+    }
+    .nav-item-revisor{
+        border-right: 2px solid white;
+    }
+    .masthead {
+        margin-top: 17vh;
+        margin-left: 4vw;
+    }
+    .bg-wrapper {
+        position: absolute;
+        width: 75rem;
+        height: 75rem;
+        transform: translateY(-50%) rotate(45deg);
+        left: 80%;
+        top: -90%;
+        z-index: -1;
+        opacity: 0.5;
+    }
+}
+/* /////////////////////////////////////////////////////// */
+
+.nav-link:hover {
+    transition: 0.5s;
+    color: var(--primary-color-navbar) !important;
+}
+
+.nav-item:hover {
+    transition: 0.5s;
+    background-color: var(--white-color-navbar);
+}
+
+.nav {
+    padding: 2px;
+}
+
+.detail-icon {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    padding: 5px;
+    background-color: var(--white-color);
+    border: 2px solid var(--primary-color);
+}
+
+.detail-icon:hover {
+    transition: 0.3s;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+.navbar {
+    background-color: var(--primary-color-navbar);
+}
+
+.tx-style {
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.categories {
+    text-decoration: none;
+    color: var(--primary-color);
+    margin: 15px 0px;
+}
+.categories:hover {
+    color: var(--secondary-color);
+}
+.presto-card {
+    margin: 20px 10px;
+    box-sizing: border-box;
+    box-shadow: none;
+}
+
+.form-check {
+    margin: 20px 0px;
+}
+
+.presto-card:hover {
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+
+.btn-presto {
+    box-sizing: border-box;
+    border-radius: 20px;
+    box-shadow: 0px 4px 0px 0px #04480a;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 30px;
+    font-size: 1.3rem;
+}
+
+.btn-presto:hover {
+    box-shadow: none;
+    transform: translate(0px, 4px);
+    transition: 0.3s;
+    background-color: var(--white-color);
+    color: var(--secondary-color);
+    outline: 2px solid var(--secondary-color);
+}
+
+.bg-join {
+    width: 100%;
+    height: 100%;
+    background: url(/media/bg-form.jpg);
+    background-position: center;
+    background-size: cover;
+}
+/* //////////////////////////////////////////////////// */
+
+.search {
+    position: relative;
+    box-shadow: 0 0 40px rgba(51, 51, 51, 0.1);
+}
+
+.search input {
+    text-indent: 25px;
+    border: 2px solid #d6d4d4;
+}
+
+.search input:focus {
+    box-shadow: none;
+    border: 2px solid var(--secondary-color);
+}
+
+.search .fa-search {
+    position: absolute;
+    top: 32%;
+    right: 32%;
+}
+
+.search .btn-search {
+    position: absolute;
+    top: 0px;
+    right: -1px;
+    height: 40px;
+    width: 3rem;
+    background: var(--primary-color-navbar);
+    border: 2px solid var(--white-color-navbar);
+    color: var(--white-color-navbar);
+}
+.btn-search:hover {
+    transition: 0.3s;
+    background-color: var(--white-color-navbar);
+    color: var(--primary-color-navbar);
+    border: 3px solid var(--primary-color-navbar);
+}
+.counter-revisor{
+    background-color: #fafafa;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    transform: scale(0.8);
+}
+.navbar-top{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    transition: .4s;
+    backdrop-filter: blur(10px);
+    background-color: transparent;
+}
+
+.footer {
+
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.footer-link {
+    color: var(--white-color);
+}
+
+.footer-link:hover {
+    color: var(--secondary-color);
+}
+
+
+
+.arrow{
+    position: absolute;
+    transform: rotate(-80deg) scale(.5);
+    top: 6%;
+    left: 49%;
+}
+.fade-in{
+    position: relative;
+    animation: fadeRight 1s;
+    animation-timing-function: cubic-bezier(0.25, 0.4, 0.55, 1.4)
+
+}
+
+@keyframes fadeRight{
+    0% {
+        opacity: 0;
+        left:-1000px;
+
+    }
+    50% {
+        opacity: 0.3;
+
+
+    }
+    100%{
+        opacity: 1;
+        left: 0px;
+
+    }
+}
+
+.alert-fixed{
+    position: absolute;
+    top: 10vh;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    z-index: 100;
+}
+
+.fade-out {
+
+    transition: 1s;
+    transform: translateY(-300px);
+    opacity:0;
+
+  }
+  .item{
+      margin-left: 1rem;
+     color: var(--primary-color);
+     font-weight: bold;
+  }
+  .item:hover{
+    color: var(--secondary-color);
+
+  }
+  .pagination{
+      justify-content: center;
+  }
+  .row {
+    --bs-gutter-x: 0rem;
+  }
+
+  .flag-style {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+
+  }
+
+.bg-image{
+
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("/media/Presto_5.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: right;
+
+}
+
